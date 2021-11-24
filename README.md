@@ -31,7 +31,7 @@ https://github.com/yihongwang001/5200P2/blob/main/db/queries.js
 ### instuctions to import database and run application
 1. connect to your mongodb with localhost:27017
 2. clone the repo
-3. inside the repo folder, bash import the file using mongoimport
+3. inside the repo folder, bash import the file using mongoimport:
 mongoimport -h localhost:27017 -d Arts -c artworks --drop --jsonArray ./db/artworks.json
 mongoimport -h localhost:27017 -d Arts -c artists --drop --jsonArray ./db/artists.json
 4. run: npm install
