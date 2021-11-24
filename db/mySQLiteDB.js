@@ -6,9 +6,9 @@ async function getArts() {
   try {
     await client.connect();
     const db = client.db("Arts");
-    const artistsCollection = db.collection("artworks");
+    const artworkCollection = db.collection("artworks");
     const query = {};
-    return await artistsCollection
+    return await artworkCollection
       .find(query)
       .toArray()
       .finally(() => client.close());
@@ -22,9 +22,9 @@ async function getArtCount() {
   try {
     await client.connect();
     const db = client.db("Arts");
-    const artistsCollection = db.collection("artworks");
+    const artworkCollection = db.collection("artworks");
     const query = {};
-    return await artistsCollection
+    return await artworkCollection
       .find(query)
       .count()
       .finally(() => client.close());
@@ -38,7 +38,7 @@ async function createArt(newArt) {
   try {
     await client.connect();
     const db = client.db("Arts");
-    const artistsCollection = db.collection("artworks");
+    const artworkCollection = db.collection("artworks");
     const query = {
       artistID: newArt.artistID,
       artworkID: (await getArtCount()) + 1,
@@ -48,7 +48,7 @@ async function createArt(newArt) {
       movement: { name: newArt.movement },
       status: { statusType: newArt.status },
     };
-    return await artistsCollection
+    return await artworkCollection
       .insertOne(query)
       .finally(() => client.close());
   } catch (err) {
@@ -61,8 +61,8 @@ async function updateArtworks(newArt) {
   try {
     await client.connect();
     const db = client.db("Arts");
-    const artistsCollection = db.collection("artworks");
-    return await artistsCollection.updateOne(
+    const artworkCollection = db.collection("artworks");
+    return await artworkCollection.updateOne(
       {
         artworkID: Number(newArt.artworkID),
       },
@@ -87,9 +87,9 @@ async function getArtByID(artworkID) {
   try {
     await client.connect();
     const db = client.db("Arts");
-    const artistsCollection = db.collection("artworks");
+    const artworkCollection = db.collection("artworks");
     const query = { artworkID: Number(artworkID) };
-    return await artistsCollection.findOne(query).finally(() => client.close());
+    return await artworkCollection.findOne(query).finally(() => client.close());
   } catch (err) {
     console.log("error", err);
   }
@@ -100,9 +100,9 @@ async function deleteArt(artToDelete) {
   try {
     await client.connect();
     const db = client.db("Arts");
-    const artistsCollection = db.collection("artworks");
+    const artworkCollection = db.collection("artworks");
     const query = { artworkID: Number(artToDelete.artworkID) };
-    return await artistsCollection
+    return await artworkCollection
       .deleteOne(query)
       .finally(() => client.close());
   } catch (err) {
