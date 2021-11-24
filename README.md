@@ -6,38 +6,22 @@
   <br>
 </h1>
 
-### Description of the requirements of the problem and list of business rules and possible nouns and actions
+### Task 1: Provide the problem requirements and the conceptual model in UML for your project. 
 
-https://github.com/lilning/cs5200-project-1/blob/main/Project%20Part%201/Business%20Requirements.pdf
+https://github.com/yihongwang001/5200P2/blob/main/tasks1-3/Business%20Requirements.pdf
 
-### Conceptual model in UML
+#### Task 2: Adapt the Logical Data model to have hierarchical tables.
+#### 1. adapt movement table and status table into Artworks table
+#### 2. adapt nationality table into Artists table
+#### 3. adapt administrators table into Art Galleries table
 
-![Image of UML](https://github.com/lilning/cs5200-project-1/blob/main/Project%20Part%201/Project1%20-%20ERD.png?raw=true)
+### Task 3: From this logical model define the main Collections you will be using in your Mongo Database. Provide a couple of JSON examples of these objects with comments when necessary
+#### The main collections we use in the application is Artworks and Artists
+![Image of Collections](https://github.com/yihongwang001/5200P2/blob/main/tasks1-3/Collections.png?raw=true)
 
-### Logical data model in ERD
-
-![Image of ERD](https://github.com/lilning/cs5200-project-1/blob/main/Project%20Part%201/Project1%20-%20ERD.png?raw=true)
-
-### Relational schema
-
-https://github.com/lilning/cs5200-project-1/blob/main/Project%20Part%201/Relational%20Schema.pdf
-
-### SQL data definition statements
-
-https://github.com/lilning/cs5200-project-1/blob/main/Project%20Part%201/project1_db.sql
-
-### Showing the tables were created and conform to the constraints through screen shots
-
-![Image of screenshots](https://github.com/lilning/cs5200-project-1/blob/main/Project%20Part%201/Project1%20-%20screenshots.png?raw=true)
-
-### SQL with test data
-
-https://github.com/lilning/cs5200-project-1/blob/main/Project%20Part%201/project1_queries.sql
-
-### SQL with query statements
-
-https://github.com/lilning/cs5200-project-1/blob/main/Project%20Part%201/project1_queries.sql
+### Task 4：Populate the tables with test data.
+### Task 5: Define and execute at least five queries that show your database. 
+https://github.com/yihongwang001/5200P2/blob/main/db/queries.js
 
 ### Whole database
 
-https://github.com/lilning/cs5200-project-1/blob/main/Project%20Part%201/P1.db
