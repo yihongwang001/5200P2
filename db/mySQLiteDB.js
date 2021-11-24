@@ -17,6 +17,22 @@ async function getArts() {
   }
 }
 
+async function getArtCount() {
+  const client = new MongoClient(uri, { useUnifiedTopology: true });
+  try {
+    await client.connect();
+    const db = client.db("Arts");
+    const artistsCollection = db.collection("artworks");
+    const query = {};
+    return await artistsCollection
+      .find(query)
+      .count()
+      .finally(() => client.close());
+  } catch (err) {
+    console.log("error", err);
+  }
+}
+
 async function createFire(newFire) {
   const client = new MongoClient(uri, { useUnifiedTopology: true });
   try {
@@ -24,11 +40,11 @@ async function createFire(newFire) {
     const db = client.db("Arts");
     const artistsCollection = db.collection("artworks");
     const query = {
-      artistID: newFire.artistID,
-      artworkID: newFire.artworkID,
-      galleryID: newFire.galleryID,
+      artistID: Number(newFire.artistID),
+      artworkID: (await getArtCount()) + 1,
+      galleryID: Number(newFire.galleryID),
       name: newFire.name,
-      year: newFire.year,
+      year: Number(newFire.year),
       movement: { name: newFire.movement },
       status: { statusType: newFire.status },
     };
@@ -46,20 +62,23 @@ async function updateArtworks(newFire) {
     await client.connect();
     const db = client.db("Arts");
     const artistsCollection = db.collection("artworks");
-    const query = {
-      artistID: newFire.artistID,
-      artworkID: newFire.artworkID,
-      galleryID: newFire.galleryID,
-      name: newFire.name,
-      year: newFire.year,
-      movement: { name: newFire.movement },
-      status: { statusType: newFire.status },
-    };
-    return await artistsCollection
-      .updateOne(query)
-      .finally(() => client.close());
-  } catch (err) {
-    console.log("error", err);
+    return await artistsCollection.updateOne(
+      {
+        artworkID: newFire.artworkID,
+      },
+      {
+        $set: {
+          artistID: newFire.artistID,
+          galleryID: newFire.galleryID,
+          name: newFire.name,
+          year: newFire.year,
+          movement: { name: newFire.movement },
+          status: { statusType: newFire.status },
+        },
+      }
+    );
+  } finally {
+    client.close();
   }
 }
 
@@ -69,11 +88,10 @@ async function getFireByID(artworkID) {
     await client.connect();
     const db = client.db("Arts");
     const artistsCollection = db.collection("artworks");
-    const query = { artworkID: artworkID };
-    return await artistsCollection
-      .find(query)
-      .toArray()
-      .finally(() => client.close());
+    const query = { artworkID: Number(artworkID) };
+    console.log("artworkID");
+    console.log(artworkID);
+    return await artistsCollection.findOne(query).finally(() => client.close());
   } catch (err) {
     console.log("error", err);
   }

@@ -119,16 +119,17 @@
           <div class="card" style="width: 18rem;">
   
   <div class="card-body">
-    <h5 class="card-title"><%= fire.name %></h5>
+    <h5 class="card-title">Name: <%= fire.name %></h5>
     
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Artwork ID: <%= fire.artworkID %></li>
-    <li class="list-group-item">Production Year: <%= fire.year %></li>
-    <li class="list-group-item">Movement ID: <%= fire.movement %></li>
     <li class="list-group-item">Artist ID: <%= fire.artistID %></li>
-    <li class="list-group-item">Status ID: <%= fire.status %></li>
+    <li class="list-group-item">Artwork ID: <%= fire.artworkID %></li>
     <li class="list-group-item">Gallery ID: <%= fire.galleryID %></li>
+    <li class="list-group-item">Production Year: <%= fire.year %></li>
+    <li class="list-group-item">Movement: <%= fire.movement.name %></li>
+    <li class="list-group-item">Status: <%= fire.status.statusType %></li>
+    
   </ul>
 </div>
         </div>
