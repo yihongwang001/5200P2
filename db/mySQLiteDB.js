@@ -40,7 +40,7 @@ async function createArt(newArt) {
     const db = client.db("Arts");
     const artistsCollection = db.collection("artworks");
     const query = {
-      artistID: Number(newArt.artistID),
+      artistID: newArt.artistID,
       artworkID: (await getArtCount()) + 1,
       galleryID: Number(newArt.galleryID),
       name: newArt.name,
@@ -68,7 +68,7 @@ async function updateArtworks(newArt) {
       },
       {
         $set: {
-          artistID: Number(newArt.artistID),
+          artistID: newArt.artistID,
           galleryID: Number(newArt.galleryID),
           name: newArt.name,
           year: Number(newArt.year),
@@ -89,8 +89,6 @@ async function getArtByID(artworkID) {
     const db = client.db("Arts");
     const artistsCollection = db.collection("artworks");
     const query = { artworkID: Number(artworkID) };
-    console.log("artworkID");
-    console.log(artworkID);
     return await artistsCollection.findOne(query).finally(() => client.close());
   } catch (err) {
     console.log("error", err);
