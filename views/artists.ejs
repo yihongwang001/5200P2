@@ -21,8 +21,9 @@
 
       <title>ARTIST</title>
   </head>
-
+  
   <body>
+    <!-- Nav Bar -->
     <section class="container-fluid">
     <%- include("nav"); -%>
     </section>
@@ -31,9 +32,11 @@
       <h1>Artist Management</h1>
       </div>
       <div class="col-4">
-      <a href="/createArtist" class="btn">Add New Artist</a>
+        <a href="/createArtist" class="btn">Add New Artist</a>
       </div>
     </section>
+
+    <!-- Artist Table -->
     <div class="container-fluid">
       <main class="row justify-content-center">
         <div class="col-10">
@@ -51,12 +54,13 @@
             <tbody>
               <% artists.forEach(function (f) { %>
               <tr>
-                <th scope="row"><a href="/artists/<%= f.artistID %>"><%= f.Name %></a></th>
+                <th scope="row"><a href="/artists/<%= f.name %>"><%= f.name %></a></th>
                 <td><%= f.birthYear %></td>
-                <td><%= f.deathYear %></td>
-                <td><%= f.nationalityName %></td>
+                <td><%= f.deathYear %></td> 
+                <td><%= f.nationality.name %></td>
+                <td><%= f.nationality.region %></td>
                 <td><form action="/artists/delete" method="POST">
-                  <input type="hidden" name="artistID" value="<%= f.artistID %>">
+                  <input type="hidden" name="_id" value="<%= f._id %>">
                   <button type="submit" class="btn" id="delete-btn">Delete</button>
                 </form></td>
               </tr>

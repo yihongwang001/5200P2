@@ -6,34 +6,32 @@ const myDB = require("../db/artist.js");
 /* GET artist home page. */
 router.get("/artists", async function (req, res) {
   console.log("Got request for /artists");
-
   const artists = await myDB.getArtists();
 
   // render the _artist_ template with the artists attrib as the list of artists
-  res.render("artists", { artists: artists });
+  res.render("artists", { artists});
 });
 
 /* GET artist details. */
-router.get("/artists/:artistID", async function (req, res) {
+router.get("/artists/:artistName", async function (req, res) {
   console.log("Got artist");
 
-  const artistID = req.params.artistID;
+  const artistName = req.params.artistName;
 
-  const artist = await myDB.getArtistByID(artistID);
+  const artist = await myDB.getArtistByID(artistName);
 
-  res.render("artistDetails", { artist: artist });
+  res.render("artistDetails", { artist: artist[0] });
 });
 
 /* POST update artworks. */
 router.post("/artists/update", async function (req, res) {
   console.log("Update artist.");
 
-  //const fireID = req.params.fireID;
-  const updateInfo = req.body;
+  const updateArtist = req.body;
 
-  console.log("gotArtist details", updateInfo);
+  console.log("gotArtist details", updateArtist);
 
-  await myDB.updateArtist(updateInfo);
+  await myDB.updateArtist(updateArtist);
 
   console.log("artist update");
 
@@ -50,11 +48,11 @@ router.get("/createArtist", async function (req, res) {
 router.post("/createArtist", async function (req, res) {
   console.log("Got post create/artists");
 
-  const artist = req.body;
+  const newArtist = req.body;
 
-  console.log("got create artist", artist);
+  console.log("got create artist", newArtist);
 
-  await myDB.createArtist(artist);
+  await myDB.createArtist(newArtist);
 
   console.log("Artist created");
 

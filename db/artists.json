@@ -1,0 +1,109 @@
+[{
+  "_id": {
+    "$oid": "619c8bc307de6fc12778c3ce"
+  },
+  "name": "Albert Bierstadt",
+  "birthYear": 1830,
+  "deathYear": 1902,
+  "nationality": {
+    "name": "United States",
+    "region": "North America"
+  },
+  "description": "Albert Bierstadt is one of the best-known American painters of all times. He belonged to the Hudson River School of painting that was celebrated for its meticulous attention to detail and a romantic representation of life of the American pioneers, and the technique of adding a glowing radiance that was typical of the Luminist style. His depictions of the wilderness scenery of Western America that included national parks and reserves, scenic lakes, frosty glaciers and creatures of the wild, are notable for their colossal sizes and vibrant use of colors, together with the interplay of light and shadow."
+},{
+  "_id": {
+    "$oid": "619c8ceb07de6fc12778c3d0"
+  },
+  "name": "Claude Monet",
+  "birthYear": 1840,
+  "deathYear": 1926,
+  "nationality": {
+    "name": "France",
+    "region": "Europe"
+  },
+  "description": "Claude Monet was a 19th century French painter and founder of the French Impressionist painting that revolved around communicating perceptions in front of nature. Along with contemporaries Renoir, Sisley, and Bazille, he formed the core of Impressionist art, a style which he prolifically pursued for most of his painting career. The title of his most famous painting, “Impression, Sunrise” was used to coin the term ‘Impressionism’."
+},{
+  "_id": {
+    "$oid": "619c8d4707de6fc12778c3d1"
+  },
+  "name": "Edvard Munch",
+  "birthYear": 1863,
+  "deathYear": 1944,
+  "nationality": {
+    "name": "Norway",
+    "region": "Europe"
+  },
+  "description": "Edvard Munch, the Norwegian artist, is considered to be a key precursor of Expressionism. Closely connected with Symbolism, Munch is best remembered for his imaginative images of angst, isolation, sexuality, denial, and death, many of which mirror his phobic and tragic life. His most famed painting is “The Scream” that is one of the most familiar works in artistic history. Noted for its vigorous style and simple direct approach, Munch’s extensive oeuvre of paintings, engravings, woodcuts and lithographs is regarded as an important force in contemporary graphic art."
+},{
+  "_id": {
+    "$oid": "619c8dc907de6fc12778c3d2"
+  },
+  "name": "Franz Marc",
+  "birthYear": 1880,
+  "deathYear": 1916,
+  "nationality": {
+    "name": "Germany",
+    "region": "Europe"
+  },
+  "description": "Franz Moritz Wilhelm Marc was a German painter and printmaker, one of the key figures of German Expressionism. He was a founding member of Der Blaue Reiter, a journal whose name later became synonymous with the circle of artists collaborating in it."
+},{
+  "_id": {
+    "$oid": "619c8e1b07de6fc12778c3d3"
+  },
+  "name": "Jean-Francois Millet",
+  "birthYear": 1814,
+  "deathYear": 1875,
+  "nationality": {
+    "name": "France",
+    "region": "Europe"
+  },
+  "description": "Jean-François Millet was a French artist and one of the founders of the Barbizon school in rural France. Millet is noted for his paintings of peasant farmers and can be categorized as part of the Realism art movement. Toward the end of his career he became increasingly interested in painting pure landscapes."
+},{
+  "_id": {
+    "$oid": "619c8e8007de6fc12778c3d4"
+  },
+  "name": "Johannes Vermeer",
+  "birthYear": 1632,
+  "deathYear": 1675,
+  "nationality": {
+    "name": "Netherlands",
+    "region": "Europe"
+  },
+  "description": "Johannes Vermeer was a Dutch artist who was well-known for his depictions of domestic middle-class interior scenes. He set a majority of his paintings in his house in Delft, particularly two small rooms with unchanging furniture and different refurbishments, often having the same people, mostly women, as subjects. His subjects also encompassed milkmaids working to affluent merchants ensconced in their luxurious homes. Vermeer’s works typically employed a rich color palette with costly pigments and are considered a study of the 17th century Dutch society."
+},{
+  "_id": {
+    "$oid": "619c8eb607de6fc12778c3d5"
+  },
+  "name": "Leonardo Da Vinci",
+  "birthYear": 1452,
+  "deathYear": 1519,
+  "nationality": {
+    "name": "Italy",
+    "region": "Europe"
+  },
+  "description": "Leonardo da Vinci is considered to be not only the greatest painter the world has ever seen but also one of the most diversely gifted persons to have ever been born. A skilled draftsman, architect, sculptor, scientist and engineering genius with immense curiosity, scientific abilities and inventiveness, he is regarded by all as being far ahead of his times. One of the greatest creators of Italian High Renaissance art, he is legendary for his mastery over oil painting and the sophisticated techniques of chiaroscuro and sfumato. His “Mona Lisa”, a masterpiece that employs both these techniques with great effect, is without a doubt the world’s most well-known painting."
+},{
+  "_id": {
+    "$oid": "619c8ee407de6fc12778c3d6"
+  },
+  "name": "Nasreddine Dinet",
+  "birthYear": 1861,
+  "deathYear": 1929,
+  "nationality": {
+    "name": "France",
+    "region": "Europe"
+  },
+  "description": "Nasreddine Dinet was a French orientalist painter and was one of the founders of the Société des Peintres Orientalistes [Society for French Orientalist Painters]. He became so enchanted with North Africa and its culture, that he converted to Islam, and was proficient in Arabic."
+},{
+  "_id": {
+    "$oid": "619c8f1907de6fc12778c3d7"
+  },
+  "name": "Vincent Van Gogh",
+  "birthYear": 1853,
+  "deathYear": 1890,
+  "nationality": {
+    "name": "Netherlands",
+    "region": "Europe"
+  },
+  "description": "Vincent Willem van Gogh was an extremely prominent Dutch post-Impressionist artist and one of the most important artists of our time. His paintings are notable for their coarse beauty, emotional truthfulness, and usage of bold colour palette. His prolific art had a powerful influence on modern art, especially 20th century painting styles using abstraction, fauvism, and expressionism."
+}]

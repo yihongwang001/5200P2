@@ -31,20 +31,20 @@
                     <form id="updateArtist" action="/artists/update" method="POST" class="justify-content-center">
                         <div class="form-group">
                             <input
-                            name="artistID"
+                            name="id"
                             type="hidden"
                             class="form-control"
-                            value="<%= artist.artistID %>"
+                            value="<%= artist._id %>"
                             />
                         </div>
                         <div class="form-group">
                             <label class="form-label">Artist Name:</label>
                             <input
                                 required="true"
-                                name="Name"
+                                name="name"
                                 type="text"
                                 class="form-control"
-                                value="<%= artist.Name %>"
+                                value="<%= artist.name %>"
                             />
                         </div>
                         <div class="form-group">
@@ -71,10 +71,20 @@
                             <label class="form-label">Nationality:</label>
                             <input
                             required="true"
-                            name="nationalityName"
+                            name="nationality"
                             type="text"
                             class="form-control"
-                            value="<%= artist.nationalityName %>"
+                            value="<%= artist.nationality.name %>"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Region:</label>
+                            <input
+                            required="true"
+                            name="region"
+                            type="text"
+                            class="form-control"
+                            value="<%= artist.nationality.region %>"
                             />
                         </div>
                         <div class="form-group">
