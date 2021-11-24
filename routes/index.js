@@ -20,11 +20,14 @@ router.get("/", async function (req, res) {
 
 /* GET fire details. */
 router.get("/Arts/:fireID", async function (req, res) {
-  console.log("Got fire details");
-
+  console.log("Got art details");
   const fireID = req.params.fireID;
 
+  console.log("fireID");
+  console.log(fireID);
   const fire = await myDB.getFireByID(fireID);
+  console.log("fire");
+  console.log(fire);
 
   res.render("fireDetails", { fire: fire });
 });
