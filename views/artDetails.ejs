@@ -43,7 +43,7 @@
                   name="artworkID"
                   type="hidden"
                   class="form-control"
-                  value="<%= fire.artworkID %>"
+                  value="<%= f.artworkID %>"
               />
             </div>
             <div>
@@ -93,7 +93,7 @@
                 <input
                   required="true"
                   name="movement"
-                  type="number"
+                  type="text"
                   class="form-control"
               /></label>
             </div>
@@ -103,7 +103,7 @@
                 <input
                   required="true"
                   name="status"
-                  type="number"
+                  type="text"
                   class="form-control"
               /></label>
             </div>
@@ -119,16 +119,16 @@
           <div class="card" style="width: 18rem;">
   
   <div class="card-body">
-    <h5 class="card-title">Name: <%= fire.name %></h5>
+    <h5 class="card-title">Name: <%= f.name %></h5>
     
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Artist ID: <%= fire.artistID %></li>
-    <li class="list-group-item">Artwork ID: <%= fire.artworkID %></li>
-    <li class="list-group-item">Gallery ID: <%= fire.galleryID %></li>
-    <li class="list-group-item">Production Year: <%= fire.year %></li>
-    <li class="list-group-item">Movement: <%= fire.movement.name %></li>
-    <li class="list-group-item">Status: <%= fire.status.statusType %></li>
+    <li class="list-group-item">Artist ID: <%= f.artistID %></li>
+    <li class="list-group-item">Artwork ID: <%= f.artworkID %></li>
+    <li class="list-group-item">Gallery ID: <%= f.galleryID %></li>
+    <li class="list-group-item">Production Year: <%= f.year %></li>
+    <li class="list-group-item">Movement: <%= f.movement.name %></li>
+    <li class="list-group-item">Status: <%= f.status.statusType %></li>
     
   </ul>
 </div>

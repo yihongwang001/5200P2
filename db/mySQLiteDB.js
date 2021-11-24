@@ -33,20 +33,20 @@ async function getArtCount() {
   }
 }
 
-async function createFire(newFire) {
+async function createArt(newArt) {
   const client = new MongoClient(uri, { useUnifiedTopology: true });
   try {
     await client.connect();
     const db = client.db("Arts");
     const artistsCollection = db.collection("artworks");
     const query = {
-      artistID: Number(newFire.artistID),
+      artistID: Number(newArt.artistID),
       artworkID: (await getArtCount()) + 1,
-      galleryID: Number(newFire.galleryID),
-      name: newFire.name,
-      year: Number(newFire.year),
-      movement: { name: newFire.movement },
-      status: { statusType: newFire.status },
+      galleryID: Number(newArt.galleryID),
+      name: newArt.name,
+      year: Number(newArt.year),
+      movement: { name: newArt.movement },
+      status: { statusType: newArt.status },
     };
     return await artistsCollection
       .insertOne(query)
@@ -56,7 +56,7 @@ async function createFire(newFire) {
   }
 }
 
-async function updateArtworks(newFire) {
+async function updateArtworks(newArt) {
   const client = new MongoClient(uri, { useUnifiedTopology: true });
   try {
     await client.connect();
@@ -64,16 +64,16 @@ async function updateArtworks(newFire) {
     const artistsCollection = db.collection("artworks");
     return await artistsCollection.updateOne(
       {
-        artworkID: newFire.artworkID,
+        artworkID: Number(newArt.artworkID),
       },
       {
         $set: {
-          artistID: newFire.artistID,
-          galleryID: newFire.galleryID,
-          name: newFire.name,
-          year: newFire.year,
-          movement: { name: newFire.movement },
-          status: { statusType: newFire.status },
+          artistID: Number(newArt.artistID),
+          galleryID: Number(newArt.galleryID),
+          name: newArt.name,
+          year: Number(newArt.year),
+          movement: { name: newArt.movement },
+          status: { statusType: newArt.status },
         },
       }
     );
@@ -82,7 +82,7 @@ async function updateArtworks(newFire) {
   }
 }
 
-async function getFireByID(artworkID) {
+async function getArtByID(artworkID) {
   const client = new MongoClient(uri, { useUnifiedTopology: true });
   try {
     await client.connect();
@@ -103,7 +103,7 @@ async function deleteArt(artToDelete) {
     await client.connect();
     const db = client.db("Arts");
     const artistsCollection = db.collection("artworks");
-    const query = { artworkID: artToDelete.artworkID };
+    const query = { artworkID: Number(artToDelete.artworkID) };
     return await artistsCollection
       .deleteOne(query)
       .finally(() => client.close());
@@ -112,7 +112,7 @@ async function deleteArt(artToDelete) {
   }
 }
 module.exports.getArts = getArts;
-module.exports.createFire = createFire;
+module.exports.createArt = createArt;
 module.exports.deleteArt = deleteArt;
-module.exports.getFireByID = getFireByID;
+module.exports.getArtByID = getArtByID;
 module.exports.updateArtworks = updateArtworks;
