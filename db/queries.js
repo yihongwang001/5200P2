@@ -84,31 +84,6 @@ async function query3() {
 }
 // one must be updating a document based on a query parameter
 // assume we want to update the status.statusType of the record whose artworkID is 14
-
-// find the artwork whose production year is later than 1900
-async function query5() {
-    let db;
-    const client = new MongoClient(uri, { useUnifiedTopology: true });
-    try {
-        await client.connect();
-        db = client.db("Arts");
-        const artworkCollection = db.collection("artworks");
-
-        const query = {
-            year: { $gt: 1900, $lt: 1913 },
-        };
-        const res = await artworkCollection.find(query).toArray();
-        console.log(
-            "Query 5: find the artwork whose production year is later than 1900 ",
-            res
-        );
-    } catch (err) {
-        console.log("error", err);
-    } finally {
-        await client.close();
-    }
-}
-
 async function query4(artworkID) {
     //assume parameter artworkID is 14
     let db;
@@ -143,6 +118,30 @@ async function query4(artworkID) {
         );
     } finally {
         client.close();
+    }
+}
+
+// find the artwork whose production year is later than 1900
+async function query5() {
+    let db;
+    const client = new MongoClient(uri, { useUnifiedTopology: true });
+    try {
+        await client.connect();
+        db = client.db("Arts");
+        const artworkCollection = db.collection("artworks");
+
+        const query = {
+            year: { $gt: 1900, $lt: 1913 },
+        };
+        const res = await artworkCollection.find(query).toArray();
+        console.log(
+            "Query 5: find the artwork whose production year is later than 1900 ",
+            res
+        );
+    } catch (err) {
+        console.log("error", err);
+    } finally {
+        await client.close();
     }
 }
 

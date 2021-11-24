@@ -1,0 +1,211 @@
+[{
+  "_id": {
+    "$oid": "619c708275beef6c63ee5115"
+  },
+  "artistID": "619c8f1907de6fc12778c3d7",
+  "artworkID": 2202,
+  "galleryID": 100,
+  "name": "Cafe Terrace At Night",
+  "year": 1888,
+  "movement": {
+    "name": "Post-Impressionism"
+  },
+  "status": {
+    "statusType": "Active"
+  }
+},{
+  "_id": {
+    "$oid": "619c708275beef6c63ee5116"
+  },
+  "artistID": "619c8f1907de6fc12778c3d7",
+  "artworkID": 2203,
+  "galleryID": 100,
+  "name": "Vase With 12 Sunflowers",
+  "year": 1889,
+  "movement": {
+    "name": "Post-Impressionism"
+  },
+  "status": {
+    "statusType": "Inactive"
+  }
+},{
+  "_id": {
+    "$oid": "619c708275beef6c63ee5117"
+  },
+  "artistID": "619c8eb607de6fc12778c3d5",
+  "artworkID": 2204,
+  "galleryID": 100,
+  "name": "Mona Lisa",
+  "year": 1503,
+  "movement": {
+    "name": "Renaissance"
+  },
+  "status": {
+    "statusType": "Active"
+  }
+},{
+  "_id": {
+    "$oid": "619c708275beef6c63ee5118"
+  },
+  "artistID": "619c8ceb07de6fc12778c3d0",
+  "artworkID": 2205,
+  "galleryID": 100,
+  "name": "Impression, Sunrise",
+  "year": 1872,
+  "movement": {
+    "name": "Impressionism"
+  },
+  "status": {
+    "statusType": "Active"
+  }
+},{
+  "_id": {
+    "$oid": "619c708275beef6c63ee5119"
+  },
+  "artistID": "619c8ceb07de6fc12778c3d0",
+  "artworkID": 2206,
+  "galleryID": 100,
+  "name": "Water Lilies",
+  "year": 1906,
+  "movement": {
+    "name": "Impressionism"
+  },
+  "status": {
+    "statusType": "Inactive"
+  }
+},{
+  "_id": {
+    "$oid": "619c708275beef6c63ee511a"
+  },
+  "artistID": "619c8d4707de6fc12778c3d1",
+  "artworkID": 2207,
+  "galleryID": 101,
+  "name": "The Scream",
+  "year": 1893,
+  "movement": {
+    "name": "Expressionism"
+  },
+  "status": {
+    "statusType": "In Maintenance"
+  }
+},{
+  "_id": {
+    "$oid": "619c708275beef6c63ee511b"
+  },
+  "artistID": "619c8e8007de6fc12778c3d4",
+  "artworkID": 2208,
+  "galleryID": 100,
+  "name": "The Girl With A Pearl Earring",
+  "year": 1665,
+  "movement": {
+    "name": "Baroque"
+  },
+  "status": {
+    "statusType": "In Maintenance"
+  }
+},{
+  "_id": {
+    "$oid": "619c708275beef6c63ee511c"
+  },
+  "artistID": "619c8ee407de6fc12778c3d6",
+  "artworkID": 2209,
+  "galleryID": 103,
+  "name": "The Snake Charmer",
+  "year": 1879,
+  "movement": {
+    "name": "Orientalism"
+  },
+  "status": {
+    "statusType": "Active"
+  }
+},{
+  "_id": {
+    "$oid": "619c708275beef6c63ee511d"
+  },
+  "artistID": "619c8e1b07de6fc12778c3d3",
+  "artworkID": 2210,
+  "galleryID": 103,
+  "name": "The Gleaners",
+  "year": 1857,
+  "movement": {
+    "name": "Realism"
+  },
+  "status": {
+    "statusType": "Inactive"
+  }
+},{
+  "_id": {
+    "$oid": "619c708275beef6c63ee511e"
+  },
+  "artistID": "619c8dc907de6fc12778c3d2",
+  "artworkID": 2211,
+  "galleryID": 100,
+  "name": "In The Rain",
+  "year": 1912,
+  "movement": {
+    "name": "Cubism"
+  },
+  "status": {
+    "statusType": "In Maintenance"
+  }
+},{
+  "_id": {
+    "$oid": "619c708275beef6c63ee511f"
+  },
+  "artistID": "619c8dc907de6fc12778c3d2",
+  "artworkID": 2212,
+  "galleryID": 100,
+  "name": "Dead Deer",
+  "year": 1913,
+  "movement": {
+    "name": "Expressionism"
+  },
+  "status": {
+    "statusType": "Active"
+  }
+},{
+  "_id": {
+    "$oid": "619c708275beef6c63ee5120"
+  },
+  "artistID": "619c8bc307de6fc12778c3ce",
+  "artworkID": 2213,
+  "galleryID": 104,
+  "name": "The Golden Gate",
+  "year": 1900,
+  "movement": {
+    "name": "Luminism"
+  },
+  "status": {
+    "statusType": "Active"
+  }
+},{
+  "_id": {
+    "$oid": "619c708275beef6c63ee5121"
+  },
+  "artistID": "619c8bc307de6fc12778c3ce",
+  "artworkID": 2214,
+  "galleryID": 104,
+  "name": "Fishing Boats At Capri",
+  "year": 1857,
+  "movement": {
+    "name": "Romanticism"
+  },
+  "status": {
+    "statusType": "Active"
+  }
+},{
+  "_id": {
+    "$oid": "619da0d247ba89d1f20c359e"
+  },
+  "artistID": "12",
+  "artworkID": 14,
+  "galleryID": 12,
+  "name": "12",
+  "year": 12,
+  "movement": {
+    "name": "21"
+  },
+  "status": {
+    "statusType": "11111111"
+  }
+}]
