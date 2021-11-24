@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "queries": "node ./db/queries.js",
     "start": "node ./node_modules/nodemon/bin/nodemon.js ./bin/www",
     "initializeDB": "sh ./db/initializeDB.sh"
   },
